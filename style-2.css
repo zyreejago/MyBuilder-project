@@ -1,0 +1,621 @@
+:root {
+  --orange: rgba(252, 165, 3);
+  --dark-orange: rgb(221, 166, 82);
+}
+/* Global */
+section {
+  padding: 50px 0 100px;
+}
+
+body {
+}
+/* Navigasi */
+.navbar-nav a {
+  color: rgb(252, 165, 3);
+  border-bottom: 2px solid rgba;
+}
+
+/* Navbar */
+#navbarfix {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbarNav a {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hero Section */
+#hero-section {
+  min-height: 100vh;
+  display: flex;
+
+  background-image: url("../img/bg-project.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0%;
+  position: relative;
+}
+
+#hero-section::after {
+  content: "";
+  display: block;
+  height: 30%;
+  width: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#hero-section .row {
+  position: absolute;
+  z-index: 1;
+}
+#hero-section h1 {
+  margin-top: 250px;
+  text-align: center;
+}
+
+/* Values Product */
+#values-product .row {
+  row-gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.layanan {
+  padding: 3.5rem 7% 1.4rem;
+}
+.layanan h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.layanan span {
+  color: var(--orange);
+}
+
+#values-product .btn:hover {
+  background-color: var(--orange);
+}
+
+/* Style font */
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.navbar-brand span {
+  color: var(--orange);
+}
+
+.navbar .navbar-item {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#hero-section .text-white {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* about and tukang section */
+#values-product .row {
+  row-gap: 3rem;
+}
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+.about h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.tukangkami h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+.about span,
+.tukangkami span {
+  color: var(--orange);
+}
+/* Tukang Section */
+
+/* Dekstop */
+@media (min-width: 992px) {
+  /*values Product*/
+
+  #values-product img {
+    height: auto;
+    width: 100%;
+  }
+  #values-product .detail {
+    width: 100%;
+  }
+}
+.carousel-inner {
+  height: 70vh;
+}
+/* popup */
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup-content {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) scale(0.25);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  transition: all 0.5s 1s;
+}
+
+.popup-img {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.popup-img img {
+  display: block;
+  width: 33.3333%;
+  border-radius: 12px;
+}
+.popup-header {
+  text-align: center;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 60px;
+}
+.popup-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.popup-header h2 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.popup-text p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.popup-text {
+  padding: 0 36px;
+  line-height: 1.4;
+}
+
+.popup-text p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.btn-popup {
+  background-color: #333;
+  margin-top: 30px;
+}
+#popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup:target .popup-content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+#popup2:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup2:target .popup-content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+#popup12:target {
+  margin-top: 18px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup12:target .popup-content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-close:link,
+.popup-close:visited {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.3s;
+}
+.popup-close:hover,
+.popup-close:active {
+  color: #555;
+}
+
+/* footer */
+footer {
+  background-color: var(--orange);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+.links {
+  margin-bottom: 1.4rem;
+}
+
+.links a:hover {
+  color: #fff;
+}
+.links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+.credit {
+  font-size: 0.8rem;
+}
+
+.credit a {
+  color: black;
+  font-weight: 700;
+}
+
+/* GITAHADI */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.table {
+  min-height: 100vh;
+  margin: auto;
+  padding: auto;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.5rem;
+}
+
+.table a {
+  text-decoration: none;
+}
+.table h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: auto;
+}
+.table h1 span {
+  color: var(--orange);
+}
+
+.table__body th,
+td {
+  font-family: "Poppins", sans-serif;
+}
+
+main.table {
+  width: 82vw;
+  height: 90vh;
+  background-color: #fff5;
+
+  backdrop-filter: blur(7px);
+  box-shadow: 0 0.4rem 0.8rem #0005;
+  border-radius: 0.8rem;
+
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4;
+  padding: 0.8rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__header .input-group {
+  width: 35%;
+  height: 100%;
+  background-color: #fff5;
+  padding: 0 0.8rem;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.table__header .input-group:hover {
+  width: 45%;
+  background-color: #fff8;
+  box-shadow: 0 0.1rem 0.4rem #0002;
+}
+
+.table__header .input-group img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.table__header .input-group input {
+  width: 100%;
+  padding: 0 0.5rem 0 0.3rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: #fffb;
+
+  margin: 0.8rem auto;
+  border-radius: 0.6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+table {
+  width: 100%;
+}
+
+td img {
+  width: 36px;
+  height: 36px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+
+  vertical-align: middle;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+thead th {
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr {
+  --delay: 0.1s;
+  transition: 0.5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+  transition: 0.2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: 0.2s ease-in-out 0.5s;
+}
+
+.status {
+  padding: 0.4rem 0;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.status.delivered {
+  background-color: #86e49d;
+  color: #006b21;
+}
+
+.status.cancelled {
+  background-color: #d893a3;
+  color: #b30021;
+}
+
+.status.pending {
+  background-color: #ebc474;
+}
+
+.status.shipped {
+  background-color: #6fcaea;
+}
+
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+    min-width: 12.1rem;
+  }
+}
+
+thead th span.icon-arrow {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 1.4px solid transparent;
+
+  text-align: center;
+  font-size: 1rem;
+
+  margin-left: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+thead th:hover {
+  color: var(--orange);
+}
+
+thead th.active span.icon-arrow {
+  background-color: var(--orange);
+  color: #fff;
+}
+
+thead th.asc span.icon-arrow {
+  transform: rotate(180deg);
+}
+
+thead th.active,
+tbody td.active {
+  color: var(--orange);
+}
+
+.export__file {
+  position: relative;
+}
+
+.export_file .export_file-btn {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: #fff6 url(images/export.png) center / 80% no-repeat;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.export_file .export_file-btn:hover {
+  background-color: #fff;
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.export__file input {
+  display: none;
+}
+
+.export_file .export_file-options {
+  position: absolute;
+  right: 0;
+
+  width: 12rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: top right;
+
+  box-shadow: 0 0.2rem 0.5rem #0004;
+
+  transition: 0.2s;
+}
+
+.export_file input:checked + .export_file-options {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 100;
+}
+
+.export_file .export_file-options label {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0;
+  background-color: #f2f2f2;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  transition: 0.2s ease-in-out;
+}
+
+.export_file .export_file-options label:first-of-type {
+  padding: 1rem 0;
+  background-color: #86e49d !important;
+}
+
+.export_file .export_file-options label:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.export_file .export_file-options img {
+  width: 2rem;
+   height: auto;
+}
